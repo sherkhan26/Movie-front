@@ -23,10 +23,10 @@ const Content: FC<{ movie: IMovie }> = ({ movie }) => {
 			<div className={styles.details}>
 				<span>{movie.parameters.year} · </span>
 				<span>{movie.parameters.country} · </span>
-				<span>{movie.parameters.duration} min.</span>
+				<span>{movie.parameters.duration} мин.</span>
 			</div>
 			<ContentList
-				name="Genres"
+				name="Жанры"
 				links={movie.genres.map((g) => ({
 					link: getGenreUrl(g.slug),
 					title: g.name,
@@ -34,7 +34,7 @@ const Content: FC<{ movie: IMovie }> = ({ movie }) => {
 				}))}
 			/>
 			<ContentList
-				name="Actors"
+				name="Актеры"
 				links={movie.actors.map((a) => ({
 					link: getActorUrl(a.slug),
 					title: a.name,

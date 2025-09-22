@@ -27,13 +27,13 @@ const PopularMovie: FC = () => {
 
 	return (
 		<div className={cn(styles.block, styles.popular)}>
-			<SubHeading title="The most popular movie" />
+			<SubHeading title="Самый популярный фильм" />
 			{isLoading ? (
 				<SkeletonLoader className="h-48" />
 			) : (
 				movie && (
 					<>
-						<h3>Opened {movie.countOpened} times</h3>
+						<h3>Открыто {movie.countOpened} раза</h3>
 						<Link href={getMovieUrl(movie.slug)}>
 							<a>
 								<Image

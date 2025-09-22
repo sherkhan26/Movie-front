@@ -19,7 +19,7 @@ const AuthItems: FC = () => {
 						item={{
 							icon: 'MdSettings',
 							link: '/profile',
-							title: 'Profile',
+							title: 'Профиль',
 						}}
 					/>
 					<LogoutButton />
@@ -33,7 +33,7 @@ const AuthItems: FC = () => {
 					item={{
 						icon: 'MdOutlineLock',
 						link: getAdminHomeUrl(),
-						title: 'Admin panel',
+						title: 'Админ панель',
 					}}
 				/>
 			)}

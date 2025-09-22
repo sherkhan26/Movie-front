@@ -42,7 +42,7 @@ const AuthFields: FC<IAuthFields> = ({
 						  }
 						: {}
 				)}
-				placeholder="Password"
+				placeholder="Пароль"
 				type="password"
 				error={errors.password}
 			/>

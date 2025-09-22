@@ -43,7 +43,7 @@ const GenreEdit: FC = () => {
 	return (
 		<Meta title="Edit genre">
 			<AdminNavigation />
-			<Heading title="Edit genre" />
+			<Heading title="Редактировать жанр" />
 			<form onSubmit={handleSubmit(onSubmit)} className={formStyles.form}>
 				{isLoading ? (
 					<SkeletonLoader count={3} />
@@ -52,9 +52,9 @@ const GenreEdit: FC = () => {
 						<div className={formStyles.fields}>
 							<Field
 								{...register('name', {
-									required: 'Name is required!',
+									required: 'Имя обязательно!',
 								})}
-								placeholder="Name"
+								placeholder="Имя"
 								error={errors.name}
 								style={{ width: '31%' }}
 							/>
@@ -71,9 +71,9 @@ const GenreEdit: FC = () => {
 
 							<Field
 								{...register('icon', {
-									required: 'Icon is required!',
+									required: 'Иконка обязательна!',
 								})}
-								placeholder="Icon"
+								placeholder="Икона"
 								error={errors.icon}
 								style={{ width: '31%' }}
 							/>
@@ -87,7 +87,7 @@ const GenreEdit: FC = () => {
 								fieldState: { error },
 							}) => (
 								<DynamicTextEditor
-									placeholder="Description"
+									placeholder="Описание"
 									onChange={onChange}
 									error={error}
 									value={value}
@@ -97,11 +97,11 @@ const GenreEdit: FC = () => {
 								validate: {
 									required: (v) =>
 										(v && stripHtml(v).result.length > 0) ||
-										'Description is required!',
+										'Описание обязательно!',
 								},
 							}}
 						/>
-						<Button>Update</Button>
+						<Button>Обновить или Сохранить</Button>
 					</>
 				)}
 			</form>

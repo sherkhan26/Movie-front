@@ -10,11 +10,12 @@ interface ISlideItem {
 	buttonTitle?: string
 }
 
-const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Watch' }) => {
+const SlideItem: FC<ISlideItem> = ({ slide, buttonTitle = 'Смотреть' }) => {
 	const { push } = useRouter()
 
 	return (
 		<div className={styles.slide}>
+			{console.log("slide - ", slide)}
 			{slide.bigPoster && (
 				<Image
 					layout="fill"

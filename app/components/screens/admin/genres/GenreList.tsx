@@ -21,7 +21,7 @@ const GenreList: FC = () => {
 	return (
 		<Meta title="Genres">
 			<AdminNavigation />
-			<Heading title="Genres" />
+			<Heading title="Жанры" />
 			<AdminHeader
 				onClick={createAsync}
 				searchTerm={searchTerm}
@@ -29,7 +29,7 @@ const GenreList: FC = () => {
 			/>
 			<AdminTable
 				tableItems={data || []}
-				headerItems={['Name', 'Slug']}
+				headerItems={['Имя', 'Slug']}
 				isLoading={isLoading}
 				removeHandler={deleteAsync}
 			/>

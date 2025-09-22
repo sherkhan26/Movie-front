@@ -43,7 +43,7 @@ const Auth: FC = () => {
 		<Meta title="Auth">
 			<section className={styles.wrapper}>
 				<form onSubmit={handleSubmit(onSubmit)}>
-					<Heading title="Auth" className="mb-6" />
+					<Heading title="Авторизация" className="mb-6" />
 					<AuthFields register={registerInput} formState={formState} />
 
 					<div className={styles.buttons}>
@@ -52,14 +52,14 @@ const Auth: FC = () => {
 							onClick={() => setType('login')}
 							disabled={isLoading}
 						>
-							Login
+							Войти
 						</Button>
 						<Button
 							type="submit"
 							onClick={() => setType('register')}
 							disabled={isLoading}
 						>
-							Register
+							Зарегистрироваться
 						</Button>
 					</div>
 				</form>

@@ -33,7 +33,7 @@ const ActorEdit: FC = () => {
 	return (
 		<Meta title="Edit actor">
 			<AdminNavigation />
-			<Heading title="Edit actor" />
+			<Heading title="Редактировать актера" />
 			{isLoading ? (
 				<SkeletonLoader count={3} />
 			) : (
@@ -41,9 +41,9 @@ const ActorEdit: FC = () => {
 					<div className={formStyles.fields}>
 						<Field
 							{...register('name', {
-								required: 'Name is required!',
+								required: 'Имя обязательно!',
 							})}
-							placeholder="Name"
+							placeholder="Имя"
 							error={errors.name}
 						/>
 						<SlugField
@@ -60,7 +60,7 @@ const ActorEdit: FC = () => {
 								fieldState: { error },
 							}) => (
 								<UploadField
-									placeholder="Photo"
+									placeholder="Фото"
 									error={error}
 									folder="actors"
 									image={value}
@@ -68,12 +68,12 @@ const ActorEdit: FC = () => {
 								/>
 							)}
 							rules={{
-								required: 'Photo is required!',
+								required: 'Фото обязательно!',
 							}}
 						/>
 					</div>
 
-					<Button>Update</Button>
+					<Button>Обновить</Button>
 				</form>
 			)}
 		</Meta>

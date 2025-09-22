@@ -22,7 +22,7 @@ const SlugField: FC<ISlugField> = ({ generate, register, error }) => {
 				error={error}
 			/>
 			<div className={styles.badge} onClick={generate}>
-				generate
+				генерировать
 			</div>
 		</div>
 	)

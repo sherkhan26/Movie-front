@@ -1,33 +1,33 @@
 import { IMenu } from './menu.types'
 
 const firstMenu: IMenu = {
-	title: 'Menu',
+	title: 'Fullstack app by Shera',
 	items: [
 		{
 			icon: 'MdHome',
 			link: '/',
-			title: 'Home',
+			title: 'Главная',
 		},
 		// {
 		// 	icon: 'MdExplore',
 		// 	link: '/genres',
 		// 	title: 'Discovery',
 		// },
-		{
-			icon: 'MdRefresh',
-			link: '/fresh',
-			title: 'Fresh movies',
-		},
+		// {
+		// 	icon: 'MdRefresh',
+		// 	link: '/fresh',
+		// 	title: 'Fresh movies',
+		// },
 		{
 			icon: 'MdLocalFireDepartment',
 			link: '/trending',
-			title: 'Trending now',
+			title: 'В тренде сейчас',
 		},
 	],
 }
 
 const userMenu: IMenu = {
-	title: 'General',
+	title: 'Общий',
 	items: [],
 }
 

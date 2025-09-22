@@ -54,7 +54,7 @@ export const useMovies = () => {
 				toastError(error, 'Create movie')
 			},
 			onSuccess({ data: _id }) {
-				toastr.success('Create movie', 'create was successful')
+				toastr.success('Создать фильм', 'создание прошло успешно')
 				push(getAdminUrl(`movie/edit/${_id}`))
 			},
 		}
@@ -68,7 +68,7 @@ export const useMovies = () => {
 				toastError(error, 'Delete movie')
 			},
 			onSuccess() {
-				toastr.success('Delete movie', 'delete was successful')
+				toastr.success('Удалить фильм', 'удаление прошло успешно')
 				queryData.refetch()
 			},
 		}

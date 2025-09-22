@@ -15,11 +15,11 @@ const UserList: FC = () => {
 	return (
 		<Meta title="Users">
 			<AdminNavigation />
-			<Heading title="Users" />
+			<Heading title="Пользователи" />
 			<AdminHeader handleSearch={handleSearch} searchTerm={searchTerm} />
 			<AdminTable
 				tableItems={data || []}
-				headerItems={['Email', 'Date register']}
+				headerItems={['Email', 'Дата регистраций']}
 				isLoading={isLoading}
 				removeHandler={deleteAsync}
 			/>

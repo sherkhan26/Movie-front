@@ -22,7 +22,7 @@ const ActorList: FC = () => {
 	return (
 		<Meta title="Actors">
 			<AdminNavigation />
-			<Heading title="Actors" />
+			<Heading title="Актеры" />
 			<AdminHeader
 				onClick={createAsync}
 				handleSearch={handleSearch}
@@ -30,7 +30,7 @@ const ActorList: FC = () => {
 			/>
 			<AdminTable
 				tableItems={data || []}
-				headerItems={['Name', 'Count movies']}
+				headerItems={['Фио', 'Число фильмов']}
 				isLoading={isLoading}
 				removeHandler={deleteAsync}
 			/>

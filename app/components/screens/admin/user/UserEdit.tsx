@@ -23,7 +23,7 @@ const UserEdit: FC = () => {
 	return (
 		<Meta title="Edit user">
 			<AdminNavigation />
-			<Heading title="Edit user" />
+			<Heading title="Редактировать пользователя" />
 			<form onSubmit={handleSubmit(onSubmit)} className="admin-form">
 				{isLoading ? (
 					<SkeletonLoader count={3} />
@@ -45,14 +45,14 @@ const UserEdit: FC = () => {
 									}}
 									className="text-link block mb-7"
 								>
-									{field.value ? 'Make it regular user' : 'Make it admin'}
+									{field.value ? 'Сделать обычным пользователем' : 'Сделать администратором'}
 								</button>
 							)}
 						/>
 					</>
 				)}
 
-				<Button>Update</Button>
+				<Button>Обновить или Сохранить</Button>
 			</form>
 		</Meta>
 	)

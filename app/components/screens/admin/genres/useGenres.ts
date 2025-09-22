@@ -49,7 +49,7 @@ export const useGenres = () => {
 				toastError(error, 'Create genre')
 			},
 			onSuccess({ data: _id }) {
-				toastr.success('Create genre', 'create was successful')
+				toastr.success('Создать жанр', 'создание прошло успешно')
 				push(getAdminUrl(`genre/edit/${_id}`))
 			},
 		}
@@ -63,7 +63,7 @@ export const useGenres = () => {
 				toastError(error, 'Delete genre')
 			},
 			onSuccess() {
-				toastr.success('Delete genre', 'delete was successful')
+				toastr.success('Удалить жанр', 'удаление прошло успешно')
 				queryData.refetch()
 			},
 		}

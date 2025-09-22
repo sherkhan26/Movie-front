@@ -36,7 +36,7 @@ const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
 			<DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} />
 
 			<div className="mt-12">
-				<SubHeading title="Similar" />
+				<SubHeading title="Похожий" />
 				<Gallery items={similarMovies} />
 			</div>
 

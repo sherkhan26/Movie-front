@@ -49,7 +49,7 @@ export const useActors = () => {
 				toastError(error, 'Create actor')
 			},
 			onSuccess({ data: _id }) {
-				toastr.success('Create actor', 'create was successful')
+				toastr.success('Создать актера', 'создание прошло успешно')
 				push(getAdminUrl(`actor/edit/${_id}`))
 			},
 		}
@@ -63,7 +63,7 @@ export const useActors = () => {
 				toastError(error, 'Delete actor')
 			},
 			onSuccess() {
-				toastr.success('Delete actor', 'delete was successful')
+				toastr.success('Удалить актера', 'удаление прошло успешно')
 				queryData.refetch()
 			},
 		}
