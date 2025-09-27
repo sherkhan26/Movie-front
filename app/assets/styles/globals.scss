@@ -60,3 +60,9 @@ input:focus {
 	transform: scale(0.9);
 	transition: opacity 300ms, transform 300ms;
 }
+
+@media (max-width: 768px) {
+	.admin-form {
+		@apply w-4/5 mt-8;
+	}
+}

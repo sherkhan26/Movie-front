@@ -9,15 +9,20 @@ const DynamicAuthItems = dynamic(() => import('./auth/AuthItems'), {
 	ssr: false,
 })
 
-const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
+interface MenuProps {
+	menu: IMenu
+	closeMobileMenu: () => void
+}
+
+const Menu: FC<MenuProps> = ({ menu: { items, title }, closeMobileMenu  }) => {
 	return (
 		<div className={styles.menu}>
 			<div className={styles.heading}>{title}</div>
 			<ul className={styles.ul}>
 				{items.map((item) => (
-					<MenuItem key={item.link} item={item} />
+					<MenuItem key={item.link} item={item} closeMobileMenu={closeMobileMenu} />
 				))}
-				{title === 'Общий' ? <DynamicAuthItems /> : null}
+				{title === 'Общий' ? <DynamicAuthItems closeMobileMenu={closeMobileMenu}/> : null}
 			</ul>
 		</div>
 	)

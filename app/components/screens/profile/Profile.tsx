@@ -62,7 +62,7 @@ const Profile: FC = () => {
 					/>
 				)}
 
-				<Button>Обновить или Сохранить</Button>
+				<Button>Обновить</Button>
 			</form>
 		</Meta>
 	)

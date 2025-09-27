@@ -1,14 +1,24 @@
 import { FC } from 'react'
-import Logo from './Logo'
 import MenuContainer from './MenuContainer/MenuContainer'
 
 import styles from './Navigation.module.scss'
 
-const Navigation: FC = () => {
+interface NavigationProps {
+	isMobileMenuOpen: boolean
+	setMobileMenuOpen: (value: boolean) => void
+	className?: string
+	closeMobileMenu: () => void
+}
+
+const Navigation: FC<NavigationProps> = ({
+	isMobileMenuOpen,
+	setMobileMenuOpen,
+	className = '',
+	closeMobileMenu
+}) => {
 	return (
-		<div className={styles.navigation}>
-			{/*<Logo />*/}
-			<MenuContainer />
+		<div className={`${styles.navigation} ${className}`}>
+			<MenuContainer closeMobileMenu={closeMobileMenu} />
 		</div>
 	)
 }

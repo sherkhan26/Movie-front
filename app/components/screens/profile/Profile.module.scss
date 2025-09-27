@@ -5,3 +5,13 @@
 		@apply mt-5;
 	}
 }
+
+@media (max-width: 768px) {
+	.form {
+		@apply w-4/5 mt-8;
+
+		> button {
+			@apply mt-2;
+		}
+	}
+}

@@ -8,12 +8,16 @@ const DynamicGenreMenu = dynamic(() => import('./genres/GenreMenu'), {
 	ssr: false,
 })
 
-const MenuContainer: FC = () => {
+interface MenuContainerProps {
+	closeMobileMenu: () => void
+}
+
+const MenuContainer: FC<MenuContainerProps> = ({ closeMobileMenu }) => {
 	return (
 		<div>
-			<Menu menu={menus[0]} />
+			<Menu menu={menus[0]} closeMobileMenu={closeMobileMenu}/>
 			{/*<DynamicGenreMenu />*/}
-			<Menu menu={{ title: 'Общий', items: [] }} />
+			<Menu menu={{ title: 'Общий', items: [] }} closeMobileMenu={closeMobileMenu}/>
 		</div>
 	)
 }

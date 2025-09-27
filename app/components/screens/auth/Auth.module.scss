@@ -9,12 +9,28 @@
 
 			> button {
 				&:first-child {
-					@apply rounded-r-none;
+					@apply rounded mr-2;
 				}
 
 				&:last-child {
-					@apply rounded-l-none opacity-80 hover:opacity-100 transition-opacity;
+					@apply rounded opacity-80 hover:opacity-100 transition-opacity;
 					background-color: #059669;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.wrapper {
+		> form {
+			@apply w-5/6;
+			.buttons {
+				@apply mt-10;
+				> button {
+					&:first-child {
+						@apply mb-2;
+					}
 				}
 			}
 		}

@@ -50,3 +50,16 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.gallery {
+		@apply flex-wrap py-0;
+	}
+
+	.item {
+		&.vertical {
+			@apply mr-2 mb-2 last:mr-0 w-1/2 h-72 ;
+			max-width: 160px;
+		}
+	}
+}

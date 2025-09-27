@@ -189,7 +189,7 @@ const MovieEdit: FC = () => {
 						/>
 					</div>
 
-					<Button>Обновить или Сохранить</Button>
+					<Button>Обновить</Button>
 				</form>
 			)}
 		</Meta>

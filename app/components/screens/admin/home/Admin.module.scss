@@ -33,3 +33,17 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.statistics {
+		@apply mt-8;
+
+		.block {
+			@apply w-2/3;
+		}
+
+		.countUsers {
+			@apply mr-2;
+		}
+	}
+}

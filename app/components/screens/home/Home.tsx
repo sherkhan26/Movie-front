@@ -15,21 +15,34 @@ const Home: FC<IHome> = ({ slides, trendingMovies, actors }) => {
 			title="Смотреть фильмы онлайн"
 			description="Смотрите фильмы и телепередачи онлайн в браузере."
 		>
+			{/* Адаптивные заголовки */}
 			<Heading
 				title="Смотреть фильмы онлайн"
-				className="text-gray-500 mb-8 text-xl"
+				className="text-gray-500 mb-6 text-lg md:text-xl lg:mb-8 lg:text-2xl"
 			/>
 
-			{slides.length && <Slider slides={slides} />}
+			{slides.length && (
+				<div className="mb-6 md:mb-10">
+					<Slider slides={slides} />
+				</div>
+			)}
 
-			<div className="my-10">
+			<div className="mb-8 md:my-10">
 				<SubHeading title="В тренде сейчас" />
-				{trendingMovies.length && <Gallery items={trendingMovies} />}
+				{trendingMovies.length && (
+					<div className="mt-4">
+						<Gallery items={trendingMovies} />
+					</div>
+				)}
 			</div>
 
 			<div>
 				<SubHeading title="Лучшие актеры" />
-				{actors.length && <Gallery items={actors} />}
+				{actors.length && (
+					<div className="mt-4">
+						<Gallery items={actors} />
+					</div>
+				)}
 			</div>
 		</Meta>
 	)

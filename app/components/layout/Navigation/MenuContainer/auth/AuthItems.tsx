@@ -8,11 +8,24 @@ import MenuItem from '../MenuItem'
 
 import LogoutButton from './LogoutButton'
 
-const AuthItems: FC = () => {
+interface AuthItemsProps {
+	closeMobileMenu: () => void
+}
+
+const AuthItems: FC<AuthItemsProps> = ({ closeMobileMenu }) => {
 	const { user } = useAuth()
 
 	return (
 		<>
+			{user?.isAdmin && (
+				<MenuItem
+					item={{
+						icon: 'MdOutlineLock',
+						link: getAdminHomeUrl(),
+						title: 'Админ панель',
+					}}
+				/>
+			)}
 			{user ? (
 				<>
 					<MenuItem
@@ -25,18 +38,17 @@ const AuthItems: FC = () => {
 					<LogoutButton />
 				</>
 			) : (
-				<MenuItem item={{ icon: 'MdLogin', link: '/auth', title: 'Войти' }} />
-			)}
-
-			{user?.isAdmin && (
 				<MenuItem
 					item={{
-						icon: 'MdOutlineLock',
-						link: getAdminHomeUrl(),
-						title: 'Админ панель',
+						icon: 'MdLogin',
+						link: '/auth',
+						title: 'Войти'
 					}}
+					closeMobileMenu={closeMobileMenu}
 				/>
 			)}
+
+
 		</>
 	)
 }

@@ -22,4 +22,50 @@ $bar-width: 20%;
 	> div:last-child {
 		@apply right-0 border-l border-l-gray-800;
 	}
+
+	@media (max-width: 768px) {
+		> div:first-child {
+			width: 280px;
+			max-width: 100%;
+			transform: translateX(-100%);
+			transition: transform 0.3s ease-in-out;
+			z-index: 40;
+			border-right: none;
+
+			&.mobileOpen {
+				transform: translateX(0);
+			}
+		}
+
+		> div:last-child {
+			display: none;
+		}
+
+		> .center {
+			padding: 1rem;
+			margin: 0 !important;
+
+			&.contentBlur {
+				filter: blur(30px);
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+.mobileMenuButton {
+	@apply fixed top-4 right-4 z-50 p-2 bg-gray-800 rounded-lg;
+
+	@media (min-width: 769px) {
+		@apply hidden;
+	}
+
+	// Показать только на мобильных
+	@media (max-width: 768px) {
+		@apply block;
+	}
+
+	svg {
+		@apply text-white text-xl;
+	}
 }
